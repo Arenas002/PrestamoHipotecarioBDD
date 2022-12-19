@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Solicitud de prestamo hipotecario" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-19T23:54:29" hostname="ARENAS" time="0.116">
+  <properties/>
+  <testcase name="01 - petición de prestamo hipotecario exitoso" classname="Solicitud de prestamo hipotecario" time="0.108"/>
+  <testcase name="02 - petición de prestamo hipotecario rechazado" classname="Solicitud de prestamo hipotecario" time="0.008"/>
+  <system-out><![CDATA[
+Escenario: 01 - peticiÃ³n de prestamo hipotecario exitoso                        ?[90m# src/test/resources/features/SolicitudPrestamoExitoso.feature:4?[0m
+Inicia prueba
+  ?[32mDado ?[0m?[32mun usuario requiere un prestamo hipotecario?[0m                              ?[90m# stepdefinitions.SolicitudPrestamoSteps.unUsuarioRequiereUnPrestamoHipotecario()?[0m
+Paso 1
+  ?[32mCuando ?[0m?[32mcumple con todos los requisitos del formulario del credito hipotecario?[0m ?[90m# stepdefinitions.SolicitudPrestamoSteps.cumpleConTodosLosRequisitosDelFormularioDelCreditoHipotecario()?[0m
+  ?[32mY ?[0m?[32msus ingresos son  mayores de ?[0m?[32m?[1m1?[0m?[32m SMMLV?[0m                                        ?[90m# stepdefinitions.SolicitudPrestamoSteps.susIngresosSonMayoresDeSMMLV(int)?[0m
+Finaliza prueba
+  ?[32mEntonces ?[0m?[32mel prestamo hipotecario es exitoso?[0m                                   ?[90m# stepdefinitions.SolicitudPrestamoSteps.elPrestamoHipotecarioEsExitoso()?[0m
+
+Escenario: 02 - peticiÃ³n de prestamo hipotecario rechazado                   ?[90m# src/test/resources/features/SolicitudPrestamoExitoso.feature:12?[0m
+Inicia prueba
+  ?[32mDado ?[0m?[32mun usuario requiere un prestamo hipotecario?[0m                           ?[90m# stepdefinitions.SolicitudPrestamoSteps.unUsuarioRequiereUnPrestamoHipotecario()?[0m
+Paso 1
+  ?[32mCuando ?[0m?[32mno cumple con los requisitos del formulario del credito hipotecario?[0m ?[90m# stepdefinitions.SolicitudPrestamoSteps.noCumpleConLosRequisitosDelFormularioDelCreditoHipotecario()?[0m
+  ?[32mY ?[0m?[32msus ingresos son menores de ?[0m?[32m?[1m1?[0m?[32m SMMLV?[0m                                      ?[90m# stepdefinitions.SolicitudPrestamoSteps.susIngresosSonMenoresDeSMMLV(int)?[0m
+finaliza prueba
+  ?[32mEntonces ?[0m?[32mel prestamo hipotecario es rechazado?[0m                              ?[90m# stepdefinitions.SolicitudPrestamoSteps.elPrestamoHipotecarioEsRechazado()?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

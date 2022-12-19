@@ -35,7 +35,7 @@ public class PagoCuotaCreditoSteps {
 
     @Cuando("se cumple el tiempo de pago  consignando {int} a la cuota de {int}")
     public void seCumpleElTiempoDePagoConsignandoALaCuotaDe(int pago, int cuota) {
-        Assert.assertEquals(pago,cuota);
+        Assert.assertEquals(pago<cuota,true);
         System.out.println("Paso 1");
     }
 }
