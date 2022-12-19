@@ -1,3 +1,3 @@
 # PrestamoHipotecarioBDD
-Cristian David Arenas
-Jhonatan Quintana Toro
+- Cristian David Arenas
+- Jhonatan Quintana Toro
