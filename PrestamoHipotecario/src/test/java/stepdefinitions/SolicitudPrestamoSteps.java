@@ -19,7 +19,8 @@ public class SolicitudPrestamoSteps {
 
     @Y("sus ingresos son  mayores de {int} SMMLV")
     public void susIngresosSonMayoresDeSMMLV(int salario) {
-        Assert.assertEquals(salario,1);
+
+        Assert.assertEquals(salario>=1,true);
     }
 
     @Entonces("el prestamo hipotecario es exitoso")
@@ -34,7 +35,7 @@ public class SolicitudPrestamoSteps {
 
     @Y("sus ingresos son menores de {int} SMMLV")
     public void susIngresosSonMenoresDeSMMLV(int salario) {
-        Assert.assertEquals(salario,2);
+        Assert.assertEquals(salario<1,true);
     }
 
     @Entonces("el prestamo hipotecario es rechazado")

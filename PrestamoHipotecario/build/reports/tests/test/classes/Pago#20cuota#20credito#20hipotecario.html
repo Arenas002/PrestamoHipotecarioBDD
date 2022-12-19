@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.158s</div>
+<div class="counter">0.164s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">75%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,33 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="03 - Retraso en pago de cuota de credito hipotecario"></a>
+<h3 class="failures">03 - Retraso en pago de cuota de credito hipotecario</h3>
+<span class="code">
+<pre>java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;800000&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepdefinitions.PagoCuotaCreditoSteps.seCumpleElTiempoDePagoConsignandoALaCuotaDe(PagoCuotaCreditoSteps.java:38)
+	at ✽.se cumple el tiempo de pago  consignando 0 a la cuota de 800000(file:///C:/Users/cris-/Desktop/Sofka%20U/QA%20Sofka/Automatizacion/Training%20Talleres/Actividad%20Final/PrestamoHipotecario/src/test/resources/features/PagoCuota.feature:7)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,52 +98,70 @@
 </tr>
 </thead>
 <tr>
-<td class="success">03 - Retraso en pago de cuota de credito hipotecario</td>
-<td class="success">0.127s</td>
-<td class="success">passed</td>
+<td class="failures">03 - Retraso en pago de cuota de credito hipotecario</td>
+<td class="failures">0.121s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">04 - Pago de cuota de credito hipotecario exitoso #1</td>
-<td class="success">0.014s</td>
+<td class="success">0.018s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">04 - Pago de cuota de credito hipotecario exitoso #2</td>
-<td class="success">0.009s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">04 - Pago de cuota de credito hipotecario exitoso #3</td>
-<td class="success">0.008s</td>
+<td class="success">0.015s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>
-Escenario: 03 - Retraso en pago de cuota de credito hipotecario       ?[90m# src/test/resources/features/PagoCuota.feature:4?[0m
-  ?[32mDado ?[0m?[32mun usuario se retrasa con el pago de la cuota?[0m                  ?[90m# stepdefinitions.PagoCuotaCreditoSteps.unUsuarioSeRetrasaConElPagoDeLaCuota()?[0m
-  ?[32mCuando ?[0m?[32mse cumple el tiempo de pago sin consignar la cuota de ?[0m?[32m?[1m800000?[0m ?[90m# stepdefinitions.PagoCuotaCreditoSteps.seCumpleElTiempoDePagoSinConsignarLaCuotaDe(int)?[0m
-  ?[32mEntonces ?[0m?[32mse presenta un incremento en el interes de mora?[0m            ?[90m# stepdefinitions.PagoCuotaCreditoSteps.sePresentaUnIncrementoEnElInteresDeMora()?[0m
+Escenario: 03 - Retraso en pago de cuota de credito hipotecario          ?[90m# src/test/resources/features/PagoCuota.feature:4?[0m
+Inicia prueba
+  ?[32mDado ?[0m?[32mun usuario se retrasa con el pago de la cuota?[0m                     ?[90m# stepdefinitions.PagoCuotaCreditoSteps.unUsuarioSeRetrasaConElPagoDeLaCuota()?[0m
+  ?[31mCuando ?[0m?[31mse cumple el tiempo de pago  consignando ?[0m?[31m?[1m0?[0m?[31m a la cuota de ?[0m?[31m?[1m800000?[0m ?[90m# stepdefinitions.PagoCuotaCreditoSteps.seCumpleElTiempoDePagoConsignandoALaCuotaDe(int,int)?[0m
+      ?[31mjava.lang.AssertionError: expected:&lt;0&gt; but was:&lt;800000&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepdefinitions.PagoCuotaCreditoSteps.seCumpleElTiempoDePagoConsignandoALaCuotaDe(PagoCuotaCreditoSteps.java:38)
+	at âœ½.se cumple el tiempo de pago  consignando 0 a la cuota de 800000(file:///C:/Users/cris-/Desktop/Sofka%20U/QA%20Sofka/Automatizacion/Training%20Talleres/Actividad%20Final/PrestamoHipotecario/src/test/resources/features/PagoCuota.feature:7)
+?[0m
+  ?[36mEntonces ?[0m?[36mse presenta un incremento en el interes de mora?[0m               ?[90m# stepdefinitions.PagoCuotaCreditoSteps.sePresentaUnIncrementoEnElInteresDeMora()?[0m
 
 Esquema del escenario: 04 - Pago de cuota de credito hipotecario exitoso ?[90m# src/test/resources/features/PagoCuota.feature:17?[0m
+inicia prueba
   ?[32mDado ?[0m?[32mun usuario requiere pagar su cuota?[0m                                ?[90m# stepdefinitions.PagoCuotaCreditoSteps.unUsuarioRequierePagarSuCuota()?[0m
 dia de pago10
+Paso 1
   ?[32mCuando ?[0m?[32mconsignar la cuota de ?[0m?[32m?[1m800000?[0m?[32m en los siguientes ?[0m?[32m?[1m&quot;10&quot;?[0m             ?[90m# stepdefinitions.PagoCuotaCreditoSteps.consignarLaCuotaDeEnLosSiguientes(int,java.lang.String)?[0m
+Finaliza prueba 
   ?[32mEntonces ?[0m?[32mse presenta un descuento en la siguiente cuota?[0m                ?[90m# stepdefinitions.PagoCuotaCreditoSteps.sePresentaUnDescuentoEnLaSiguienteCuota()?[0m
 
 Esquema del escenario: 04 - Pago de cuota de credito hipotecario exitoso ?[90m# src/test/resources/features/PagoCuota.feature:18?[0m
+inicia prueba
   ?[32mDado ?[0m?[32mun usuario requiere pagar su cuota?[0m                                ?[90m# stepdefinitions.PagoCuotaCreditoSteps.unUsuarioRequierePagarSuCuota()?[0m
 dia de pago20
+Paso 1
   ?[32mCuando ?[0m?[32mconsignar la cuota de ?[0m?[32m?[1m800000?[0m?[32m en los siguientes ?[0m?[32m?[1m&quot;20&quot;?[0m             ?[90m# stepdefinitions.PagoCuotaCreditoSteps.consignarLaCuotaDeEnLosSiguientes(int,java.lang.String)?[0m
+Finaliza prueba 
   ?[32mEntonces ?[0m?[32mse presenta un descuento en la siguiente cuota?[0m                ?[90m# stepdefinitions.PagoCuotaCreditoSteps.sePresentaUnDescuentoEnLaSiguienteCuota()?[0m
 
 Esquema del escenario: 04 - Pago de cuota de credito hipotecario exitoso ?[90m# src/test/resources/features/PagoCuota.feature:19?[0m
+inicia prueba
   ?[32mDado ?[0m?[32mun usuario requiere pagar su cuota?[0m                                ?[90m# stepdefinitions.PagoCuotaCreditoSteps.unUsuarioRequierePagarSuCuota()?[0m
 dia de pago30
+Paso 1
   ?[32mCuando ?[0m?[32mconsignar la cuota de ?[0m?[32m?[1m800000?[0m?[32m en los siguientes ?[0m?[32m?[1m&quot;30&quot;?[0m             ?[90m# stepdefinitions.PagoCuotaCreditoSteps.consignarLaCuotaDeEnLosSiguientes(int,java.lang.String)?[0m
+Finaliza prueba 
   ?[32mEntonces ?[0m?[32mse presenta un descuento en la siguiente cuota?[0m                ?[90m# stepdefinitions.PagoCuotaCreditoSteps.sePresentaUnDescuentoEnLaSiguienteCuota()?[0m
 </pre>
 </span>
@@ -136,7 +174,7 @@ dia de pago30
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 19 dic. 2022 17:43:33</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 19 dic. 2022 18:37:31</p>
 </div>
 </div>
 </body>

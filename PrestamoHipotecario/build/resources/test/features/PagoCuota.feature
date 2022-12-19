@@ -4,7 +4,7 @@ Característica: Pago cuota credito hipotecario
   Escenario:03 - Retraso en pago de cuota de credito hipotecario
 
     Dado un usuario se retrasa con el pago de la cuota
-    Cuando se cumple el tiempo de pago sin consignar la cuota de 800000
+    Cuando se cumple el tiempo de pago  consignando 0 a la cuota de 800000
     Entonces se presenta un incremento en el interes de mora
 
 

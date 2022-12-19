@@ -11,12 +11,6 @@ public class PagoCuotaCreditoSteps {
         System.out.println("Inicia prueba");
     }
 
-    @Cuando("se cumple el tiempo de pago sin consignar la cuota de {int}")
-    public void seCumpleElTiempoDePagoSinConsignarLaCuotaDe(int cuota) {
-        Assert.assertEquals(cuota,800000);
-        System.out.println("Paso 1");
-    }
-
     @Entonces("se presenta un incremento en el interes de mora")
     public void sePresentaUnIncrementoEnElInteresDeMora() {
         System.out.println("finaliza prueba");
@@ -29,7 +23,7 @@ public class PagoCuotaCreditoSteps {
 
     @Cuando("consignar la cuota de {int} en los siguientes {string}")
     public void consignarLaCuotaDeEnLosSiguientes(int cuota, String dia) {
-        Assert.assertEquals(cuota,800000);
+        Assert.assertEquals(cuota>=800000,true);
         System.out.println("dia de pago"+ dia);
         System.out.println("Paso 1");
     }
@@ -37,5 +31,11 @@ public class PagoCuotaCreditoSteps {
     @Entonces("se presenta un descuento en la siguiente cuota")
     public void sePresentaUnDescuentoEnLaSiguienteCuota() {
         System.out.println("Finaliza prueba ");
+    }
+
+    @Cuando("se cumple el tiempo de pago  consignando {int} a la cuota de {int}")
+    public void seCumpleElTiempoDePagoConsignandoALaCuotaDe(int pago, int cuota) {
+        Assert.assertEquals(pago,cuota);
+        System.out.println("Paso 1");
     }
 }
